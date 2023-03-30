@@ -1,0 +1,203 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Custom properties */
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: salmon;
+  justify-content: space-around;
+  gap: 10px;
+  background-image: url(images/bg-intro-desktop.png);
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.free-trial {
+  background-color: hsl(248, 32%, 49%);
+  padding: 14px;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+input {
+  padding: 10px 30px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: hsla(249, 10%, 26%, 0.5);
+  background-image: none;
+}
+
+.input-error {
+  border-color: red;
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.error-type {
+  justify-content: right;
+  font-size: 0.6rem;
+  color: red;
+  display: none;
+}
+
+.error-type-active {
+  display: flex;
+}
+
+.input-success {
+  border-color: green;
+}
+
+.text {
+  max-width: 500px;
+  color: white;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+section {
+  display: grid;
+  padding: 40px;
+  border-radius: 10px;
+  gap: 15px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  background-color: hsl(154, 59%, 51%);
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsl(154, 55%, 26%);
+  border-radius: 10px;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.terms {
+  font-size: 0.6rem;
+  color: hsl(246, 25%, 77%);
+}
+
+span {
+  color: hsl(246, 25%, 77%);
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    gap: 30px;
+  }
+  main {
+    max-width: 500px;
+  }
+  .text h1 {
+    font-size: 1.6rem;
+  }
+  .text p {
+    font-size: 0.8rem;
+  }
+  section {
+    padding: 20px;
+  }
+  input {
+    padding-left: 15px;
+  }
+}
